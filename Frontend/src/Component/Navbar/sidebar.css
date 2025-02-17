@@ -1,0 +1,131 @@
+/* Sidebar Base Styles */
+.sidebar {
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+  border-right: 1px solid #ddd;
+  transition: width 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.sidebar:hover {
+  width: 105px;
+}
+
+/* Logo */
+.sidebar .logo {
+  margin-bottom: 24px;
+}
+
+.sidebar .logo svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Hover Effect */
+.nav-button:hover {
+  background: #e60023;
+  color: white;
+}
+
+/* Tooltip */
+.nav-button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, left 0.2s ease-in-out;
+}
+
+.nav-button:hover::after {
+  opacity: 1;
+  visibility: visible;
+  left: 90px;
+}
+
+/* Active button */
+.nav-button.active {
+  background: #e60023;
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  margin-left: 80px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+
+  .sidebar:hover {
+    width: 150px;
+  }
+
+  .main-content {
+    margin-left: 60px;
+  }
+
+  .nav-button::after {
+    font-size: 12px;
+    left: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .sidebar:hover {
+    width: 120px;
+  }
+
+  .main-content {
+    margin-left: 50px;
+  }
+}
