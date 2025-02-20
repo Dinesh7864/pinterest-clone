@@ -11,3 +11,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.slide-dot {
+  transition: all 0.3s ease;
+}
+
+.slide-dot.active {
+  width: 24px;
+  background-color: #E60023;
+}
+
+/* Add smooth transitions */
+.transform {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effects for cards */
+.rounded-3xl:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Pinterest card shadow */
+.shadow-xl {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+              0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Form focus styles */
+input:focus {
+  outline: none;
+  border-color: #e60023;
+  box-shadow: 0 0 0 1px #e60023;
+}
+
+/* Image grid animation */
+.grid {
+  transition: transform 0.5s ease-in-out;
+}
+
+.grid:hover {
+  transform: rotate(-10deg) scale(1.02);
+}
