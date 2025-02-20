@@ -1,0 +1,119 @@
+/* Search Section */
+.search-section {
+    min-height: 100vh;
+    background-color: #fff4b6;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .search-container {
+        flex-direction: row;
+    }
+}
+
+/* Left Image Section */
+.search-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 50%;
+    height: 500px;
+}
+
+.search-image-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 260px;
+    height: 260px;
+    background-color: #ffa726;
+    border-radius: 24px;
+    transform: rotate(-12deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.search-input-box {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+    width: 280px;
+    height: 280px;
+    background-color: white;
+    border-radius: 24px;
+    transform: rotate(12deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.search-input {
+    background-color: white;
+    border-radius: 999px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    color: gray;
+}
+
+.search-text {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Right Text Section */
+.search-text-container {
+    max-width: 50%;
+    text-align: left;
+    padding-left: 80px;
+    margin-top: 40px;
+}
+
+.search-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e60023;
+    margin-bottom: 24px;
+}
+
+.search-description {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 32px;
+}
+
+.search-button {
+    background-color: #e60023;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.search-button:hover {
+    background-color: #ad081b;
+}

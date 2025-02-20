@@ -1,0 +1,110 @@
+main {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+
+.hero-container {
+    max-width: 64rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #C17F05;
+    transition: all 0.5s ease;
+    height: 5rem;
+}
+
+/* Dots */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.slide-dot {
+    height: 0.5rem;
+    border-radius: 9999px;
+}
+
+.slide-dot.active {
+    width: 1.5rem;
+    background-color: #E60023;
+    /* Pinterest red */
+}
+
+.slide-dot:not(.active) {
+    width: 0.5rem;
+    background-color: #D1D5DB;
+    /* Gray-300 */
+}
+
+/* Image Grid */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+.image-box {
+    aspect-ratio: 3 / 4;
+    background-color: #E5E7EB;
+    /* Gray-200 */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: opacity 0.3s ease;
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+.image-box:hover {
+    opacity: 0.9;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #D1D5DB;
+    /* Gray-300 */
+    animation: pulse 1.5s infinite;
+}
+
+/* How it works section */
+.how-it-works {
+    margin-top: 3rem;
+    background-color: #FEF3C7;
+    width: 100%;
+    /* Yellow-100 */
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.how-it-works button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+    color: black;
+}
