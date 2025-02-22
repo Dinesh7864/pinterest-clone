@@ -68,3 +68,68 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+
+
+
+
+# Pinterest Clone Authentication Modals
+
+This project includes three key React components that handle user authentication for a Pinterest-like application. The components include:
+
+1. **SignupModal**
+   - A modal dialog that allows users to create a new account.
+   - Captures username, email, and password.
+   - Sends a POST request to an API endpoint (`/api/register/`) for user registration.
+   - Displays a success or error message based on the response.
+   - Includes an option to sign up using Google authentication.
+
+2. **LoginModal**
+   - A modal dialog that allows users to log in to their account.
+   - Captures username and password.
+   - Sends a POST request to an API endpoint (`/api/login/`) for authentication.
+   - If successful, stores the authentication token in `localStorage` and navigates to the homepage.
+   - Includes options for social logins using Facebook and Google.
+
+3. **Navigation**
+   - The main navigation bar for the application.
+   - Displays buttons for "Explore", "About", "Business", and "Press".
+   - Provides "Log in" and "Sign up" buttons that trigger the respective modals.
+   - Integrates with the `LoginModal` and `SignupModal` components.
+
+## Technologies Used
+- React.js
+- Tailwind CSS / Custom CSS
+- React Icons (`react-icons/fa`)
+- Axios for API requests
+- React Router (`useNavigate`) for navigation
+- Headless UI for modal transitions
+
+## Installation
+1. Clone the repository.
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   npm start
+   ```
+
+## API Endpoints
+- **POST `/api/register/`**: Registers a new user.
+- **POST `/api/login/`**: Authenticates a user and returns a token.
+
+## Usage
+- Click on "Sign up" to register a new account.
+- Click on "Log in" to authenticate with existing credentials.
+- Use social login buttons for quick authentication via Google or Facebook.
+
+## Future Enhancements
+- Add password recovery functionality.
+- Implement persistent authentication with token refresh.
+- Improve UI/UX with additional animations and styling.
+
