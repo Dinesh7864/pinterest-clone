@@ -6,7 +6,7 @@ import Home from "./Component/sign_up_pages/Home";
 import Navbar from "./Component/Navbar/Navbar"; 
 import Sidebar from "./Component/Navbar/Sidebar"; 
 import PinterestAPI from "./Component/PinterestAPI";
-import Navigation from './Component/Navigation';
+import Navigation from './Component/Navbar/Navigation';
 import Hero from "./Component/Hero";
 import Footer from './Component/Footer/Footer';
 import SignUpSection from "./Component/sign_up_pages/SignUpSection";
@@ -55,7 +55,7 @@ function App() {
       ) : (
         // Render the second layout when the user is not logged in
         <div className="min-h-screen bg-white">
-          <Navigation />
+          <Navigation setIsLoggedIn={setIsLoggedIn} />
           <Hero currentSlide={currentSlide} slides={slides} />
           <SearchSection />
           <MakeupSection />

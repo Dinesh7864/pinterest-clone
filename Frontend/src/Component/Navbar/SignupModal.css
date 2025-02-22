@@ -1,0 +1,126 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.modal-container {
+    position: fixed;
+    inset: 0;
+    overflow-y: auto;
+}
+
+.modal-content-wrapper {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.modal-panel {
+    width: 100%;
+    max-width: 400px;
+    transform: scale(1);
+    overflow: hidden;
+    border-radius: 16px;
+    background: white;
+    padding: 24px;
+    text-align: left;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.input-field {
+    margin-top: 4px;
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.input-field:focus {
+    border-color: red;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: red;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-button:hover {
+    background: darkred;
+}
+
+.divider {
+    position: relative;
+    margin: 16px 0;
+    text-align: center;
+}
+
+.divider-line {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+}
+
+.divider-text {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.social-button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: white;
+    color: #4a4a4a;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.social-button:hover {
+    background: #f9f9f9;
+}
+
+.social-icon {
+    margin-right: 8px;
+    color: red;
+}

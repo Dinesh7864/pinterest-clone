@@ -1,7 +1,6 @@
 /* Navigation Styles */
 .navigation {
     position: fixed;
-    padding: 0.5rem;
     top: 0;
     width: 100%;
     background-color: white;
@@ -9,7 +8,7 @@
 }
 
 .nav-container {
-    max-width: 1280px;
+    display: flex;
     margin: 0 auto;
     padding: 0 16px;
 }
