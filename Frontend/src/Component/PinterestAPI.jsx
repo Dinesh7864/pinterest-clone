@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Download, Bookmark } from 'lucide-react';
 import './PinterestAPI.css';
 
+
 function PinterestAPI({ search }) {
   const [images, setImages] = useState([]);
   const [filteredImages, setFilteredImages] = useState([]);
@@ -55,17 +56,29 @@ function PinterestAPI({ search }) {
     );
     setFilteredImages(filtered);
   }, [search, images]);
- // Function to correctly handle image downloads
- const handleDownload = (url) => {
-  const link = document.createElement("a"); 
-  link.href = url;
-  link.download = "image.jpg"; // Customizable filename
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-  if (loading) return <div className="gallery-container"><h1>Loading...</h1></div>;
-  if (error) return <div className="gallery-container"><h1>Error: {error}</h1></div>;
- };
+  const handleDownload = async (url) => {
+    try {
+      const response = await fetch(url);
+      if (!response.ok) throw new Error("Network response was not ok");
+  
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+  
+      // Create a temporary <a> element to trigger download
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = "image.png"; // Set the filename
+      document.body.appendChild(link);
+      link.click();
+  
+      // Cleanup
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+  
   return (
     <div className="gallery-container">
       <div className="gallery-wrapper">

@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Home, Compass, PlusCircle, Bell, MessageCircle } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import "./sidebar.css";
 const Sidebar = () => {
   const [activeButton, setActiveButton] = useState(null);
+  const navigate = useNavigate();
 
-  const handleButtonClick = (button) => {
+  const handleButtonClick = (button, path) => {
     setActiveButton(button);
+    navigate(path); // Navigate to the corresponding page
   };
+
+  
 
   return (
     <div className="sidebar">
@@ -26,35 +31,35 @@ const Sidebar = () => {
         <button
           className={`nav-button ${activeButton === "home" ? "active" : ""}`}
           data-tooltip="Home"
-          onClick={() => handleButtonClick("home")}
+          onClick={() => handleButtonClick("home", "/")}
         >
           <Home size={24} />
         </button>
         <button
           className={`nav-button ${activeButton === "explore" ? "active" : ""}`}
           data-tooltip="Explore"
-          onClick={() => handleButtonClick("explore")}
+          onClick={() => handleButtonClick("explore", "/explore")}
         >
           <Compass size={24} />
         </button>
         <button
           className={`nav-button ${activeButton === "create" ? "active" : ""}`}
           data-tooltip="Create"
-          onClick={() => handleButtonClick("create")}
+          onClick={() => handleButtonClick("create", "/create")}
         >
           <PlusCircle size={24} />
         </button>
         <button
           className={`nav-button ${activeButton === "notifications" ? "active" : ""}`}
           data-tooltip="Notifications"
-          onClick={() => handleButtonClick("notifications")}
+          onClick={() => handleButtonClick("notifications", "/notifications")}
         >
           <Bell size={24} />
         </button>
         <button
           className={`nav-button ${activeButton === "messages" ? "active" : ""}`}
           data-tooltip="Messages"
-          onClick={() => handleButtonClick("messages")}
+          onClick={() => handleButtonClick("messages", "/messages")}
         >
           <MessageCircle size={24} />
         </button>

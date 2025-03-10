@@ -3,14 +3,20 @@ import { Link, useNavigate } from "react-router-dom";
 import { User, ChevronDown } from "lucide-react";
 import "./navbar.css"; 
 import SearchBar from "../SearchBar";
+import Profile from "../Profile";
 
 function Navbar({ search, setSearch }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
-
+ 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/login");
+    navigate("/Login");
+  };
+  const [activeButton, setActiveButton] = useState(null);
+  const handleButtonClick = (button, path) => {
+    setActiveButton(button);
+    navigate(path); // Navigate to the corresponding page
   };
 
   const toggleDropdown = () => {
@@ -34,24 +40,35 @@ function Navbar({ search, setSearch }) {
      <div className="nav-container">   
       <ul className="nav-links">
        
-        {!localStorage.getItem("token") ? (
-          <>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
-          </>
-        ) : (
-          <li><button onClick={handleLogout} className="logout-btn">Logout</button></li>
-        )}
+        
       </ul>
 
       <div className="profile-section">
-        <button className="profile-button"><User size={24} /></button>
-        <button className="profile-button" onClick={toggleDropdown}><ChevronDown size={24} /></button>
-
+     
+      {/* <button
+          className={`profile-button`}
+         
+          onClick={() => handleButtonClick("Profile", "/Profile")}
+        >
+          <User size={24} />
+        </button> */}
+        
+        <Profile />
+      <button className="profile-button" onClick={toggleDropdown}><ChevronDown size={24} /></button>
+    
         {isDropdownOpen && (
           <div className="dropdown-menu">
             <ul>
-              <li><Link to="/profile">Profile</Link></li>
+            {!localStorage.getItem("token") ? (
+          <>
+            <li><Link to="/register">Register</Link></li>
+           
+          </>
+        ) : (
+         <></>
+          
+        )}  
+              <li><Link to="/Logout">Logout</Link></li>
               <li><Link to="/settings">Settings</Link></li>
             </ul>
           </div>

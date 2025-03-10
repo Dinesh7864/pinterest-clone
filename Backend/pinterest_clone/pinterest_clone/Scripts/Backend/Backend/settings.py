@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-@9l#ta6e424!bncmhntlh@@!y&wub=@9ub90bb-7)m4j4eownd
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
+CORS_ALLOW_CREDENTIALS = True 
 
 
 # Application definition
@@ -53,6 +54,23 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
+# Allow React frontend to communicate with Django backend
+CORS_ALLOW_ALL_ORIGINS = True  # Change to specific origin in production
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+}
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # React frontend URL

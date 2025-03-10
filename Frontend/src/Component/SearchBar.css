@@ -1,4 +1,16 @@
 
-  
+.user_profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;  /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    background-color: #E5E5E5; /* Light gray background */
+    color: black; /* Text color */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase; /* Ensures uppercase letters */
+}
 
-  

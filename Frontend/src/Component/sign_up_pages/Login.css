@@ -1,0 +1,223 @@
+/* ================= Navbar Styles ================= */
+.navbarbfl {
+  background: white;
+  padding: 10px 20px;
+  
+}
+
+.inner_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarbfl_left,
+.navbarbfl_Right {
+  display: flex;
+  align-items: center;
+}
+
+.navbarbfl_left a,
+.navbarbfl_Right a {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+/* Log in button with red background */
+.login-btn {
+  background: red;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: rgb(255, 100, 100);
+}
+
+/* Pinterest Brand */
+.brand {
+  font-size: 20px;
+ 
+  margin-left: 15px;
+  color: red;
+}
+
+.brand span {
+  float: left;
+}
+
+/* ================= Popup Styles ================= */
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Container */
+.popup {
+  background: white;
+  width: 460px;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Logo */
+.logo {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+/* Popup Header */
+.popup-header h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Form Styles */
+.popup-form {
+  width: 81%;
+}
+
+.popup-form label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.popup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Password Container */
+.password-container {
+  position: relative;
+}
+
+.password-container .eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* Forgot Password */
+.forgot-password {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+  text-decoration: none;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  background: #e60023;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.login-button:hover {
+  background: #c2001b;
+}
+
+/* Social Login */
+.social-login p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.facebook-login,
+.google-login {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.facebook-login {
+  background: #1877f2;
+  color: white;
+}
+
+.google-login {
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+/* Terms */
+.terms {
+  font-size: 12px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.terms a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+/* Signup Text */
+.signup-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.signup-text a {
+  color: #0073e6;
+  font-weight: bold;
+  text-decoration: none;
+}
+.brand b{
+  color: red;
+}
